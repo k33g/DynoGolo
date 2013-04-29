@@ -1,7 +1,7 @@
 DynoGolo
 ========
 
-DynamicProxy with Golo
+DynamicProxy with Golo : src : [https://github.com/k33g/DynoGolo/blob/master/gololibs/dynogolo.golo](https://github.com/k33g/DynoGolo/blob/master/gololibs/dynogolo.golo)
 
 
 you can run sample : `./g.sh java gololibs demo.golo`
