@@ -4,10 +4,6 @@
 # All rights reserved. No warranty, explicit or implicit, provided.
 #
 
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home
-export GOLO_HOME=/Users/k33g_org/Dropbox/golo/r0/bin
-
 echo "1- loading jars"
 #FIND JARS
 JARS=""
@@ -20,8 +16,9 @@ done
 
 export CLASSPATH_PREFIX=${CLASSPATH_PREFIX}:"$JARS"
 
-echo "2- loading Golo Libraries"
-#FIND GOLO LIBRARIES
+
+echo "2- Golo Libraries"
+#FIND FASTFORWARD GOLO LIBRARIES
 LIBS=""
 FILES="$(find $2 -name '*.golo')"
 for gf in $FILES
@@ -30,8 +27,9 @@ do
 	echo "--> $gf"
 done
 
-echo "3- running $3"
+echo "3- run $3"
 echo 
 
-$GOLO_HOME/gologolo $LIBS $3
+gologolo $LIBS $3
+
 
